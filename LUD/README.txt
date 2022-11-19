@@ -1,8 +1,7 @@
 There is a bash file named compile, it will compile and run three programs with various inputs
 and threads(there will be three warnings it is nothing but clearing the output file). There will 
 be no output printed on display rather it will be saved in three files such as output, pthread, 
-openmp. output compare all three programs(using only optimal no of thread). pthread, openmp compare 
-itself with various no of threads.
+openmp.
 
 The following algorithm has been implemented:
 
