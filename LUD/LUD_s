@@ -1,0 +1,5 @@
+serial : LUD.o
+	cc -o serial LUD.o
+	
+LUD.o : LUD.c
+	cc -c LUD.c

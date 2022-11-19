@@ -1,0 +1,5 @@
+parallel_pth : LUD_pthread.o
+	cc -o parallel_pth LUD_pthread.o -pthread
+	
+LUD_pthread.o : LUD_pthread.c
+	cc -c LUD_pthread.c -pthread
