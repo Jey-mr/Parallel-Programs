@@ -1,0 +1,5 @@
+parallel_omp : LUD_omp.o
+	cc -o parallel_omp LUD_omp.o -fopenmp
+	
+LUD_omp.o : LUD_omp.c
+	cc -c LUD_omp.c -fopenmp

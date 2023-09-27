@@ -1,0 +1,24 @@
+#!/bin/bash
+
+gcc clear.c
+./a.out
+
+total_threads=8
+
+make -f LUD_s
+
+make -f LUD_pth
+
+make -f LUD_openmp
+
+for ((i = 200; i<=1000; i+=200))
+do
+	./serial $i
+	
+	for((j = 1; j <= $total_threads; j++))		
+	do
+		./parallel_pth $i $j $total_threads
+		./parallel_omp $i $j $total_threads
+	done
+done
+
